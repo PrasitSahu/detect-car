@@ -1,6 +1,10 @@
 import { useState } from "react";
 
-const DropArea = () => {
+interface Props {
+  onUpdate: (imgUrl: string) => void;
+}
+
+const DropArea = ({ onUpdate }: Props) => {
   const [drag, setDrag] = useState<boolean>(false);
   const [hide, setHide] = useState<boolean>(true);
 
@@ -12,14 +16,16 @@ const DropArea = () => {
     const formData = new FormData();
     formData.append("file", file);
 
-    const res = await fetch("http://127.0.0.1:8000" + "/upload/", {
+    const res = await fetch(window.location.origin + "/upload/", {
       method: "POST",
       body: formData,
     });
 
     const blob = await res.blob();
     const imageUrl = URL.createObjectURL(blob);
-    console.log(imageUrl);
+
+    setHide(true);
+    onUpdate(imageUrl);
   }
 
   return (
