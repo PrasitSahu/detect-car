@@ -22,7 +22,6 @@ pipenv shell
 > Use a `bash` shell
 
 ```bash
-chmod +x script.sh
 ./build.sh
 ```
 
