@@ -14,12 +14,13 @@ cd detect-car
 ```bash
 pip install pipenv
 pipenv shell
+pipenv install
 ```
-
-3. Create build
 
 > [!NOTE]
 > Use a `bash` shell
+
+3. Create build
 
 ```bash
 ./build.sh

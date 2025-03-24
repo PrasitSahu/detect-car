@@ -6,7 +6,7 @@ model_path = os.path.join(os.curdir, "detectcar", "model.pt")
 
 model = YOLO(model_path)
 
-device = "cuda" if torch.cuda.is_available() else "cuda"
+device = "cuda" if torch.cuda.is_available() else "cpu"
 model.to(device)
 
 
