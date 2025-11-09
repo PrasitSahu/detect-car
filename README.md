@@ -31,3 +31,18 @@ pipenv install
 ```shell
 python manage.py runserver
 ```
+
+### Docker
+
+```bash
+docker build . -t detect-car
+docker run -it -p 8000:8000 detect-car
+```
+
+```bash
+pipenv shell
+```
+
+```bash
+python manage.py runserver 0.0.0.0:8000
+```

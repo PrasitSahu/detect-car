@@ -1,16 +1,16 @@
-[[source]]
-url = "https://pypi.org/simple"
-verify_ssl = true
-name = "pypi"
+    [[source]]
+    url = "https://pypi.org/simple"
+    verify_ssl = true
+    name = "pypi"
 
-[packages]
-torch = "*"
-ultralytics = "*"
-django = "*"
-djangorestframework = "*"
-django-cors-headers = "*"
+    [packages]
+    torch = "*"
+    ultralytics = "*"
+    django = "*"
+    djangorestframework = "*"
+    django-cors-headers = "*"
 
-[dev-packages]
+    [dev-packages]
 
-[requires]
-python_version = "3.13"
+    [requires]
+    python_version = "3.8"
